@@ -86,6 +86,7 @@ install_and_launch_tool() {
     # Automatically delete the tool after it has been run
     cd ..
     rm -rf "$tool_dir"
+    chmod +x m-tool.sh
 }
 
 # Main menu
