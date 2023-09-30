@@ -3,6 +3,8 @@ git pull
 sleep 1
 clear
 git stash
+sleep 1
+chmod +x m-tool.sh
 # Function to animate opening effect with fade-in and banner
 animate_opening_effect() {
     clear
