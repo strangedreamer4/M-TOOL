@@ -3,7 +3,6 @@ git pull
 sleep 1
 clear
 git stash
-chmod +x *
 # Function to animate opening effect with fade-in and banner
 animate_opening_effect() {
     clear
