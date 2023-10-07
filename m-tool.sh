@@ -69,6 +69,14 @@ install_and_launch_tool() {
             tool_script="chmod +x iprunner.sh && ./iprunner.sh"
             tool_banner="Tool 3 (iprunner)"
             ;;
+        "4")
+            tool_dir="M-SENDER"
+            tool_repo="https://github.com/strangedreamer4/M-SENDER.git"
+            tool_script="chmod +x msender.py && python3 msender.py"
+            tool_banner="Tool 4 (M-Sender)"
+            ;;   
+            
+            
         *)
             echo "Invalid selection"
             return
@@ -110,12 +118,13 @@ while true; do
     echo -e "\e[93m1. Tool 1 (hellcat)\e[0m"
     echo -e "\e[93m2. Tool 2 (MacChanger)\e[0m"
     echo -e "\e[93m3. Tool 3 (iprunner)\e[0m"
+    echo -e "\e[93m4. Tool 4 (M-sender)\e[0m"
     echo -e "\e[91mQ. Quit\e[0m"
 
     read choice
 
     case $choice in
-        "1" | "2" | "3")
+        "1" | "2" | "3" | "4")
             install_and_launch_tool "$choice"
             ;;
         "Q" | "q")
