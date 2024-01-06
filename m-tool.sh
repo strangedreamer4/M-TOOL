@@ -75,7 +75,12 @@ install_and_launch_tool() {
             tool_script="chmod +x msender.py && python3 msender.py"
             tool_banner="Tool 4 (M-Sender)"
             ;;   
-            
+        "5")
+            tool_dir="VCHAT"
+            tool_repo="https://github.com/strangedreamer4/VCHAT.git"
+            tool_script="chmod +x vchat.py && python3 vchat.py"
+            tool_banner="Tool 4 (VChat)"
+            ;;       
             
         *)
             echo "Invalid selection"
@@ -119,12 +124,13 @@ while true; do
     echo -e "\e[93m2. Tool 2 (MacChanger)\e[0m"
     echo -e "\e[93m3. Tool 3 (iprunner)\e[0m"
     echo -e "\e[93m4. Tool 4 (M-sender)\e[0m"
+    echo -e "\e[93m5. Tool 5 (VChat)\e[0m"
     echo -e "\e[91mQ. Quit\e[0m"
 
     read choice
 
     case $choice in
-        "1" | "2" | "3" | "4")
+        "1" | "2" | "3" | "4" | "5")
             install_and_launch_tool "$choice"
             ;;
         "Q" | "q")
