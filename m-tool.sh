@@ -3,7 +3,7 @@
 # Install required system packages
 sudo apt-get update -y
 # Install required Python packages
-pip3 install tkinter Pillow pyrebase gTTS playsound
+pip3 install tkinter Pillow pyrebase4 gTTS playsound
 clear
 git pull
 sleep 1
