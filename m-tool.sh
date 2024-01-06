@@ -65,31 +65,31 @@ install_and_launch_tool() {
         "1")
             tool_dir="hellcat"
             tool_repo="https://github.com/strangedreamer4/hellcat.git"
-            tool_script="python3 hellcat.py"
+            tool_script="sudo python3 hellcat.py"
             tool_banner="Tool 1 (hellcat)"
             ;;
         "2")
             tool_dir="MacChanger"
             tool_repo="https://github.com/strangedreamer4/MacChanger.git"
-            tool_script="chmod +x machanger.sh && ./machanger.sh"
+            tool_script="chmod +x machanger.sh && sudo ./machanger.sh"
             tool_banner="Tool 2 (MacChanger)"
             ;;
         "3")
             tool_dir="IPRUNNER"
             tool_repo="https://github.com/strangedreamer4/IPRUNNER.git"
-            tool_script="chmod +x iprunner.sh && ./iprunner.sh"
+            tool_script="chmod +x iprunner.sh && sudo ./iprunner.sh"
             tool_banner="Tool 3 (iprunner)"
             ;;
         "4")
             tool_dir="M-SENDER"
             tool_repo="https://github.com/strangedreamer4/M-SENDER.git"
-            tool_script="chmod +x msender.py && python3 msender.py"
+            tool_script="chmod +x msender.py && sudo python3 msender.py"
             tool_banner="Tool 4 (M-Sender)"
             ;;   
         "5")
             tool_dir="VCHAT"
             tool_repo="https://github.com/strangedreamer4/VCHAT.git"
-            tool_script="chmod +x vchat.py && python3 vchat.py"
+            tool_script="chmod +x vchat.py && sudo python3 vchat.py"
             tool_banner="Tool 4 (VChat)"
             ;;       
             
