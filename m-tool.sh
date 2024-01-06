@@ -1,5 +1,10 @@
 #!/bin/bash
 # [/07/04/31/31/03/08\]
+# Install required system packages
+sudo apt-get update -y
+# Install required Python packages
+pip3 install tkinter Pillow pyrebase gTTS playsound
+clear
 git pull
 sleep 1
 clear
