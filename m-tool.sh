@@ -89,7 +89,7 @@ install_and_launch_tool() {
         "5")
             tool_dir="VCHAT"
             tool_repo="https://github.com/strangedreamer4/VCHAT.git"
-            tool_script="chmod +x install && sudo bash install.sh"
+            tool_script="chmod +x install.sh && sudo bash install.sh"
             tool_banner="Tool 4 (VChat)"
             ;;       
             
