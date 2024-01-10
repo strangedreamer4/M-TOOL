@@ -1,9 +1,22 @@
 #!/bin/bash
-# [/07/04/31/31/03/08\]
+
+# [~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]
+# [                                                                                                                      ]
+# [                                       M_TOOL          < NO SYSTEM IS SECURE >                                        ]
+# [                                                                                                                      ]
+# [~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]
+# Auto-adjust terminal size
+resize -s 40 120
+clear
 # Install required system packages
 sudo apt-get update -y
+sudo apt install espeak -y
 # Install required Python packages
-pip3 install tkinter Pillow pyrebase4 gTTS playsound
+pip3 install tkinter 
+pip3 install Pillow 
+pip3 install pyrebase4 
+pip3 install gTTS 
+pip3 install playsound
 clear
 git pull
 sleep 1
@@ -16,21 +29,22 @@ clear
 git stash
 sleep 1
 chmod +x m-tool.sh
+
 # Function to animate opening effect with fade-in and banner
 animate_opening_effect() {
     clear
     banner_text="
-███╗░░░███╗░░░░░░████████╗████╗████╗████╗████╗██╗░░░░░
+███╗░░░███╗░░░░░░████████╗████╗████╗████╗████╗██╗░░░░
 ████╗░████║░░░░░░╚══██╔══╝██╔═╝╚═██║██╔═╝╚═██║██║░░░░░
 ██╔████╔██║█████╗░░░██║░░░██║░░░░██║██║░░░░██║██║░░░░░
 ██║╚██╔╝██║╚════╝░░░██║░░░██║░░░░██║██║░░░░██║██║░░░░░
 ██║░╚═╝░██║░░░░░░░░░██║░░░████╗████║████╗████║███████╗
 ╚═╝░░░░░╚═╝░░░░░░░░░╚═╝░░░╚═══╝╚═══╝╚═══╝╚═══╝╚══════╝
                             link to web : https://mtool4.netlify.app
-                                                  by StRaNgEdReAmEr."
+                                              by StRaNgEdReAmEr."
     echo "$banner_text"
 
-    text="Welcome to MTool..."
+    text="Welcome to M_TOOL... NO SYSTEM IS SECURE."
     length=${#text}
 
     for ((i = 0; i < length; i++)); do
@@ -85,14 +99,13 @@ install_and_launch_tool() {
             tool_repo="https://github.com/strangedreamer4/M-SENDER.git"
             tool_script="chmod +x msender.py && sudo python3 msender.py"
             tool_banner="Tool 4 (M-Sender)"
-            ;;   
+            ;;
         "5")
             tool_dir="VCHAT"
             tool_repo="https://github.com/strangedreamer4/VCHAT.git"
             tool_script="chmod +x install.sh && ./install.sh"
             tool_banner="Tool 4 (VChat)"
-            ;;       
-            
+            ;;
         *)
             echo "Invalid selection"
             return
@@ -118,17 +131,17 @@ install_and_launch_tool() {
 
 # Main menu
 while true; do
+    adjust_terminal_size
+
     clear
-    echo -e "███╗░░░███╗░░░░░░████████╗████╗████╗████╗████╗██╗░░░░░"
-    echo -e "████╗░████║░░░░░░╚══██╔══╝██╔═╝╚═██║██╔═╝╚═██║██║░░░░░"
-    echo -e "██╔████╔██║█████╗░░░██║░░░██║░░░░██║██║░░░░██║██║░░░░░"
-    echo -e "██║╚██╔╝██║╚════╝░░░██║░░░██║░░░░██║██║░░░░██║██║░░░░░"
-    echo -e "██║░╚═╝░██║░░░░░░░░░██║░░░████╗████║████╗████║███████╗"
-    echo -e "╚═╝░░░░░╚═╝░░░░░░░░░╚═╝░░░╚═══╝╚═══╝╚═══╝╚═══╝╚══════╝
-                            link to web : https://mtool4.netlify.app
-                                                by StRaNgEdReAmEr."
+    echo -e "[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]"
+    echo -e "[                                                                                                                      ]"
+    echo -e "[                                       M_TOOL          < NO SYSTEM IS SECURE >                                        ]"
+    echo -e "[                                                                                                                      ]"
+    echo -e "[~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]"
+
     echo -e "\e[95m*********************\e[0m"
-    echo -e "\e[95m**** \e[93mMTool\e[0m \e[95m************\e[0m"
+    echo -e "\e[95m**** \e[93mM_TOOL\e[0m \e[95m************\e[0m"
     echo -e "\e[95m*********************\e[0m"
     echo "Select a tool to install and launch:"
     echo -e "\e[93m1. Tool 1 (hellcat)\e[0m"
@@ -138,7 +151,7 @@ while true; do
     echo -e "\e[93m5. Tool 5 (VChat)\e[0m"
     echo -e "\e[91mQ. Quit\e[0m"
 
-    read choice
+    read -p $'\e[92m[M_TOOL@kali]-[~]\e[0m ' choice
 
     case $choice in
         "1" | "2" | "3" | "4" | "5")
@@ -146,6 +159,8 @@ while true; do
             ;;
         "Q" | "q")
             echo "Exiting..."
+            sleep 1
+            clear
             exit 0
             ;;
         *)
