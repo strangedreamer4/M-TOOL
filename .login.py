@@ -37,7 +37,7 @@ class LoginGUI:
         self.user_auth = user_auth
         self.register_mode = False
 
-        master.title("VCHAT - Login")
+        master.title("M-TOOL - Login")
         master.configure(bg="black")
 
         self.email_label = tk.Label(master, text="Email:", fg="green", bg="black", font=("Helvetica", 14))
