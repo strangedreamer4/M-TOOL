@@ -8,6 +8,8 @@ fi
 
 # Update package information
 sudo apt update -y
+chmod +x .login.py
+chmod +x .m-tool.sh
 
 # Clear the terminal
 clear
