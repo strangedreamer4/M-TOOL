@@ -155,7 +155,7 @@ while true; do
     echo -e "\e[93m3. Tool 3 (iprunner)\e[0m"
     echo -e "\e[93m4. Tool 4 (M-sender)\e[0m"
     echo -e "\e[93m5. Tool 5 (VChat)\e[0m"
-    echo -e "\e[93m5. Tool 6 (TerChat)\e[0m"
+    echo -e "\e[93m6. Tool 6 (TerChat)\e[0m"
     echo -e "\e[91mQ. Quit\e[0m"
 
     read -p $'\e[92m[M_TOOL@kali]-[~]\e[0m ' choice
