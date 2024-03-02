@@ -161,7 +161,7 @@ while true; do
     read -p $'\e[92m[M_TOOL@kali]-[~]\e[0m ' choice
 
     case $choice in
-        "1" | "2" | "3" | "4" | "5" |"6")
+        "1" | "2" | "3" | "4" | "5" | "6")
             install_and_launch_tool "$choice"
             ;;
         "Q" | "q")
