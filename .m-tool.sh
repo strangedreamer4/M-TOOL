@@ -104,9 +104,15 @@ install_and_launch_tool() {
             tool_dir="VCHAT"
             tool_repo="https://github.com/strangedreamer4/VCHAT.git"
             tool_script="chmod +x install.sh && ./install.sh"
-            tool_banner="Tool 4 (VChat)"
+            tool_banner="Tool 5 (VChat)"
             ;;
-        *)
+        "6")
+            tool_dir="TERCHAT"
+            tool_repo="https://github.com/strangedreamer4/TERCHAT.git"
+            tool_script="chmod +x terchat.py && python3 terchat.py"
+            tool_banner="Tool 6 (TerChat)"
+            ;;
+         *)
             echo "Invalid selection"
             return
             ;;
@@ -149,12 +155,13 @@ while true; do
     echo -e "\e[93m3. Tool 3 (iprunner)\e[0m"
     echo -e "\e[93m4. Tool 4 (M-sender)\e[0m"
     echo -e "\e[93m5. Tool 5 (VChat)\e[0m"
+    echo -e "\e[93m5. Tool 6 (TerChat)\e[0m"
     echo -e "\e[91mQ. Quit\e[0m"
 
     read -p $'\e[92m[M_TOOL@kali]-[~]\e[0m ' choice
 
     case $choice in
-        "1" | "2" | "3" | "4" | "5")
+        "1" | "2" | "3" | "4" | "5" |"6")
             install_and_launch_tool "$choice"
             ;;
         "Q" | "q")
