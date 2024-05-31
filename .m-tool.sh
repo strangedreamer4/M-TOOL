@@ -17,6 +17,7 @@ pip3 install Pillow
 pip3 install pyrebase4 
 pip3 install gTTS 
 pip3 install playsound
+pip3 install firebase_admin
 clear
 git pull
 sleep 1
