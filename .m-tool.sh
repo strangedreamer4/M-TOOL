@@ -158,7 +158,7 @@ while true; do
     echo -e "\e[93m6. Tool 6 (TerChat)\e[0m"
     echo -e "\e[91mQ. Quit\e[0m"
 
-    read -p $'\e[92m[M_TOOL@kali]-[~]\e[0m ' choice
+    read -p "[$(date '+%F %T')][M_TOOL@$(whoami)]-[~] " choice
 
     case $choice in
         "1" | "2" | "3" | "4" | "5" | "6")
