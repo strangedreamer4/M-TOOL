@@ -13,7 +13,7 @@ def log_ip_address():
     try:
         ip = get_ip_address()
         save_ip_address(ip)
-        print('IP address logged successfully.')
+        print('WELL COME TO M-TOOL.')
     except requests.RequestException as e:
         print(f"Error getting IP address: {e}")
     except Exception as e:
