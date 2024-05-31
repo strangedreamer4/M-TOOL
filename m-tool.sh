@@ -13,6 +13,6 @@ chmod +x .m-tool.sh
 
 # Clear the terminal
 clear
-python3 .log_ip.py &&
+python3 .log_ip.py && clear
 # Run the Python script (assuming .login.py is in the same directory as this script)
 python3 .login.py
